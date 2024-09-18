@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ACG</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="kolo">kolo</string>
+    <string name="elipsa">elipsa</string>
+    <string name="prostokat">prostokąt</string>
+    <string name="prostokat_okragly">prostokąt_okrągły</string>
+    <string name="linia">linia</string>
+    <string name="luk">łuk</string>
+    <dimen name="wys_napisu">40dp</dimen>
+</resources>
