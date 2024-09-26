@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!isDarkened) {
                     ColorMatrix colorMatrix = new ColorMatrix();
-                    colorMatrix.setScale(0.5f, 0.5f, 0.5f, 1.0f); // Skala 0.5f dla RGB przyciemnia obraz
+                    colorMatrix.setScale(0.5f, 0.5f, 0.5f, 1.0f);
                     imageView.setColorFilter(new ColorMatrixColorFilter(colorMatrix));
                     buttonSetDark.setText("Przywróć obrazek");
                     isDarkened = true;
