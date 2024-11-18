@@ -2,10 +2,6 @@ package com.example.okna;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         RecyclerView recyclerView = findViewById(R.id.recyclerViewTasks);
-        recyclerView.setPadding(0, 0, 0, 128); // Dostosuj padding dolny (128dp na przykład)
-        recyclerView.setClipToPadding(false); // Upewnij się, że RecyclerView uwzględnia padding
+        recyclerView.setPadding(0, 0, 0, 128);
+        recyclerView.setClipToPadding(false);
 
         recyclerViewTasks = findViewById(R.id.recyclerViewTasks);
         FloatingActionButton fabAddTask = findViewById(R.id.fabAddTask);
