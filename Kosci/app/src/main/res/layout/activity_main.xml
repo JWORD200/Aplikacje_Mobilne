@@ -73,7 +73,7 @@
             android:src="@drawable/k6_0" />
     </LinearLayout>
 
-   <TextView
+    <TextView
         android:id="@+id/rollResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
