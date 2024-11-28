@@ -1,6 +1,5 @@
 package com.example.kosci;
 
-
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -8,6 +7,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,12 +39,23 @@ public class MainActivity extends AppCompatActivity {
         Button resetButton = findViewById(R.id.resetButton);
 
         rollButton.setOnClickListener(v -> {
+            Map<Integer, Integer> diceCounts = new HashMap<>();
             int rollScore = 0;
+
             for (ImageView diceView : diceViews) {
                 int roll = random.nextInt(6);
                 diceView.setImageResource(diceImages[roll]);
-                rollScore += roll + 1;
+                int diceValue = roll + 1;
+
+                diceCounts.put(diceValue, diceCounts.getOrDefault(diceValue, 0) + 1);
             }
+
+            for (Map.Entry<Integer, Integer> entry : diceCounts.entrySet()) {
+                if (entry.getValue() >= 2) {
+                    rollScore += entry.getKey() * entry.getValue();
+                }
+            }
+
             rollResult.setText("Wynik tego losowania: " + rollScore);
             gameScore += rollScore;
             gameResult.setText("Wynik gry: " + gameScore);
